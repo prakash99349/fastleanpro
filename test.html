@@ -25,6 +25,13 @@
       href="images/favicon-main-128x128.png"
       type="image/x-icon"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:800"
+    />
+    <link rel="stylesheet" href="test.css" />
 
     <link rel="stylesheet" href="css/mobirise2.css" />
     <link rel="stylesheet" href="css/mobirise-icons.css" />
@@ -52,13 +59,13 @@
       type="button"
       class="btn btn-primary"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#myModal"
     >
       Launch demo modal
     </button>
 
     <!-- Modal -->
-    <div
+    <!-- <div
       class="modal fade"
       id="exampleModal"
       tabindex="-1"
@@ -108,24 +115,72 @@
               </div>
               <input type="hidden" name="listname" value="awlist6590182" />
               <input type="hidden" name="meta_required" value="name,email" />
-
-              <input
-                type="submit"
-                name="submit"
-                value="Send it Now"
-                class="btn btn-primary"
-              />
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">
+                  Send it Now
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- END TEST MODAL  -->
 
-    <!-- 2nd Modal Start  -->
+    <!-- Modal New Start  -->
+    <div id="myModal" class="modal fade">
+      <div
+        class="modal-dialog modal-newsletter modal-dialog-centered"
+        style="height: auto !important"
+      >
+        <div class="modal-content">
+          <form
+            method="post"
+            action="https://www.aweber.com/scripts/addlead.pl"
+          >
+            <div class="modal-header">
+              <h4>Join Our Newsletter</h4>
 
-    <!-- 2nd Modal End  -->
+              <button
+                ype="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                Subscribe our newsletter to receive the latest news and
+                exclusive offers every week. No spam.
+              </p>
+              <div class="form-group">
+                <input type="hidden" name="listname" value="awlist6590182" />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="http://127.0.0.1:5500/thankyou.html"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  required
+                />
+                <div class="text-center my-3">
+                  <button type="submit" class="btn btn-primary mx-auto w-100">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+              <div class="footer-link"><a href="#">No Thanks</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Modal New End  -->
 
     <script src="bootstrap.bundle.min.js"></script>
     <script src="smooth-scroll.js"></script>
